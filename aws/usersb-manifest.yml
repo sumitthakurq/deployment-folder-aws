@@ -2,18 +2,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: restaurantapp
+  name: usersbapp
   labels:
-    app: restaurantapp
+    app: usersbapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: restaurantapp
+      app: usersbapp
   template:
     metadata:
       labels:
-        app: restaurantapp
+        app: usersbapp
     spec:
       containers:
         - name: restaurantapp
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: restaurant-service
+  name: usersb-service
 spec:
   ports:
     - protocol: TCP
       port: 9091
       targetPort: 9091
   selector:
-    app: restaurantapp
+    app: usersbapp
  
