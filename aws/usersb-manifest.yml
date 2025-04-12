@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: restaurantapp
-          image: sumit30/usersb:4
+          image: sumit30/usersb:s9
           imagePullPolicy: Always
           ports:
             - containerPort: 9091
